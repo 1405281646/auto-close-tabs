@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自动关闭标签页 - 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>自动关闭标签页</h1>
+      <p class="subtitle">配置哪些网页在打开后自动关闭标签页</p>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <div class="row-text">
+          <h2>启用自动关闭</h2>
+          <p>关闭后所有规则暂停生效</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="enabled">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <div class="row-text">
+          <h2>全局默认倒计时</h2>
+          <p>未单独设置时长的规则使用此值</p>
+        </div>
+        <div class="delay-input">
+          <input type="number" id="defaultDelay" min="1" step="1" value="20">
+          <span>秒</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>规则列表</h2>
+      <ul id="ruleList"></ul>
+      <p id="emptyHint" class="empty">还没有规则。添加一条，或在网页上右键选择"把当前页面加入自动关闭规则"。</p>
+    </section>
+
+    <section class="card">
+      <h2>添加规则</h2>
+      <div class="add-form">
+        <input type="text" id="newDomain" placeholder="域名，如 example.com" spellcheck="false">
+        <input type="text" id="newPath" placeholder="路径前缀（可选），如 /watch" spellcheck="false">
+        <input type="number" id="newDelay" placeholder="秒数（可选）" min="1" step="1">
+        <button id="addBtn">添加</button>
+      </div>
+      <p class="hint">域名匹配该站点及其子域名；路径前缀匹配以该路径开头的页面。</p>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
