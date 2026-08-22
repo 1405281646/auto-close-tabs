@@ -55,6 +55,23 @@
       </div>
       <p class="hint">域名匹配该站点及其子域名；路径前缀匹配以该路径开头的页面。</p>
     </section>
+
+    <section class="card">
+      <h2>排除列表</h2>
+      <p class="hint">命中排除列表的页面即使匹配规则也不会被关闭。</p>
+      <ul id="exclusionList"></ul>
+      <p id="exclusionEmptyHint" class="empty">还没有排除项。添加一条，或在网页上右键选择"把当前页面加入排除列表"。</p>
+    </section>
+
+    <section class="card">
+      <h2>添加排除</h2>
+      <div class="add-form">
+        <input type="text" id="exNewDomain" placeholder="域名，如 example.com" spellcheck="false">
+        <input type="text" id="exNewPath" placeholder="路径前缀（可选），如 /login" spellcheck="false">
+        <button id="excludeBtn">添加</button>
+      </div>
+      <p class="hint">域名匹配该站点及其子域名；路径前缀匹配以该路径开头的页面。</p>
+    </section>
   </main>
   <script src="options.js"></script>
 </body>
